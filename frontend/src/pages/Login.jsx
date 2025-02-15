@@ -21,7 +21,7 @@ function Login() {
   };
 
   return (
-    <div className='login flex flex-col gap-5'>
+    <div className='login flex flex-col gap-5' style={{ textAlign: 'center' }}>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
         <div>

@@ -17,8 +17,20 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
+from django.http import JsonResponse
 
 
 from sim.api import api
 
-urlpatterns = [path("admin/", admin.site.urls), path("api/", api.urls)]
+
+def go(request):
+    return JsonResponse(
+        data={
+            "msg": "SIM application",
+            "api": "http://localhost:8000/api/",
+            "admin": "http://localhost:8000/admin/",
+        }
+    )
+
+
+urlpatterns = [path("admin/", admin.site.urls), path("", go), path("api/", api.urls)]

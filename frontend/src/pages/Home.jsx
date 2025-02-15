@@ -20,8 +20,8 @@ function Home() {
   };
 
   return (
-    <div className='2'>
-      <h1>Welcome to the home page</h1>
+    <div className='2' style={{ textAlign: 'center' }}>
+      <h1 style={{ fontWeight: '300' }}>Welcome to the home page</h1>
       {isAuthenticated ? (
         <div>
           <p>Hi there {user?.username}!</p>
@@ -30,8 +30,11 @@ function Home() {
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <p className='flex flex-col align-items-center'>
-          You are not logged in.
+        <p
+          className='flex flex-col'
+          style={{ gap: '1rem', textAlign: 'center' }}
+        >
+          You are not logged in. please login.
           <hr />
           <Link to='/login'>Login</Link> <Link to='/register'>Register</Link>
         </p>

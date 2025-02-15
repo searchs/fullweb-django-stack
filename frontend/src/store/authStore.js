@@ -16,6 +16,7 @@ export const useAuthStore = create(
           }
         );
         const data = await response.json();
+        console.log(`CSRF token: ${data.csrftoken}`);
         return data.csrftoken;
       },
 

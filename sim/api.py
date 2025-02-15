@@ -8,7 +8,7 @@ from . import schemas
 api = NinjaAPI(csrf=True)
 
 
-@api.get("/set-csrf-token")
+@api.get("/set-csrf-token", tags=["auth"])
 def get_csrf_token(request):
     return {"csrftoken": get_token(request)}
 

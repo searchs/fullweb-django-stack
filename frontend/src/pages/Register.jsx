@@ -36,7 +36,7 @@ function Register() {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center' }}>
       <h1>Register</h1>
       <form onSubmit={handleSubmit}>
         <div>
